@@ -27,7 +27,7 @@ contract LandRecord {
 
     function createRecord(string memory _ownerName, uint _area, address _ownerAddress) public {
         recordCount++;
-        uint tokenId = LandRecordToken.createToken(_ownerName, _ownerAddress);
+        uint tokenId = token.createToken(_ownerName, _ownerAddress);
         records[recordCount] = Record(recordCount, _ownerName, _area, _ownerAddress, tokenId);
         ownerRecords[_ownerAddress].push(recordCount);
         emit RecordCreated(recordCount, _ownerName, _area, _ownerAddress);
