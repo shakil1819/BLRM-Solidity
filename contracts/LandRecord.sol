@@ -1,6 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0
 
 pragma solidity >=0.7.0 <0.9.0;
+/**
+   * @title LandRecord
+   * @dev this contract creates all parameters for users and creates token
+   * @custom:dev-run-script scripts/deploy_with_ethers.ts
+   */
 
 import "./LandRecordToken.sol";
 
