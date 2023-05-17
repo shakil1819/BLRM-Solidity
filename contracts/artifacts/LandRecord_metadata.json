@@ -247,11 +247,11 @@
 			]
 		},
 		"contracts/LandRecordToken.sol": {
-			"keccak256": "0x56190da294425d191cfab3ecab1eb110ed756fd4b561b05315ee7a975f960e79",
+			"keccak256": "0x1134152440e5e07e6031e5103e4a408679be3487cddcee1c65292532556fef25",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://b92248db50d4acd9027f110174a2066033379aad6878277a098b92e432d21b29",
-				"dweb:/ipfs/QmeKyzSr6yjHudPYa82aE27NPFrv4AkyByicDHUduu4gQo"
+				"bzz-raw://d664f5910ad5fcce9347df362761ba27272c9d4f6a2f874278236b8673b6bf8e",
+				"dweb:/ipfs/QmVCyBxpyfp45BDbuQ3WfPnuptiKWxU91cLbErP4U9wzhU"
 			]
 		}
 	},
