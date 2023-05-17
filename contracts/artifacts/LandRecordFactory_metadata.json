@@ -139,11 +139,11 @@
 			]
 		},
 		"contracts/LandRecord.sol": {
-			"keccak256": "0x80be6fd5003251c63168181897c43d1a7d6b06181399931c011be9ca5bf72074",
+			"keccak256": "0x34d8ec5b9bdc806197f55c729014129c835bd3e6da1eec6ec41f7dcda5bcee28",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://15c0bf71b0363051795875bac6b54c6d81c3c59848df1a8c31d12281a94db2e4",
-				"dweb:/ipfs/QmdM7RcKHFNdeEifVQz1SHpA3XQAfTqyHj1hz6zoJKGRaD"
+				"bzz-raw://9735b8d4ea57d85dae5cb370843d33f78a3082a8d683c821767cd8aece216584",
+				"dweb:/ipfs/QmdZAwLbtnzkGvdtdvMS8Lrh6qfnncMwWyHicYyTDSo323"
 			]
 		},
 		"contracts/LandRecordFactory.sol": {

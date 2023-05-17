@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract LandRecordToken is ERC20 {
     constructor(string memory name, string memory symbol) ERC20(name, symbol) {
-        _mint(msg.sender, 1000 * 10 ** decimals());
+        _mint(msg.sender, 100 * 10 ** decimals());
     }
 
     function createToken(string memory _ownerName, address _ownerAddress) public returns (uint) {
