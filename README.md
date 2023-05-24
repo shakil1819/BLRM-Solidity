@@ -9,6 +9,7 @@ git clone https://github.com/shakil1819/BLRM-Solidity.git
 ```
 - [ ] Install truffle,npm,ganache-cli,metamask wallet 
 ```bash
+$ remixd #to connect it with localhost
 $ truffle compile
 $ truffle migrate
 $ truffle build
