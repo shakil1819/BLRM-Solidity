@@ -92,7 +92,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/LandRecordFactory.sol": "LandRecordFactory"
+			"Desktop/BLRM-Solidity/contracts/LandRecordFactory.sol": "LandRecordFactory"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -138,7 +138,7 @@
 				"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3"
 			]
 		},
-		"contracts/LandRecord.sol": {
+		"Desktop/BLRM-Solidity/contracts/LandRecord.sol": {
 			"keccak256": "0x34d8ec5b9bdc806197f55c729014129c835bd3e6da1eec6ec41f7dcda5bcee28",
 			"license": "GPL-3.0",
 			"urls": [
@@ -146,7 +146,7 @@
 				"dweb:/ipfs/QmdZAwLbtnzkGvdtdvMS8Lrh6qfnncMwWyHicYyTDSo323"
 			]
 		},
-		"contracts/LandRecordFactory.sol": {
+		"Desktop/BLRM-Solidity/contracts/LandRecordFactory.sol": {
 			"keccak256": "0x2c845526f5a5c2765c18260b4fe58c572dae5929d7afbd315a4173e10e50b829",
 			"license": "GPL-3.0",
 			"urls": [
@@ -154,12 +154,12 @@
 				"dweb:/ipfs/QmXPMB7EhYshMLqYppAvn5dHEvCfhSo2yx9dgVLJ5YijvH"
 			]
 		},
-		"contracts/LandRecordToken.sol": {
-			"keccak256": "0x1134152440e5e07e6031e5103e4a408679be3487cddcee1c65292532556fef25",
+		"Desktop/BLRM-Solidity/contracts/LandRecordToken.sol": {
+			"keccak256": "0x26ae5680d788bf7138474f57f424646a563a7ee91aa7b30ed6bd36757cf7c368",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://d664f5910ad5fcce9347df362761ba27272c9d4f6a2f874278236b8673b6bf8e",
-				"dweb:/ipfs/QmVCyBxpyfp45BDbuQ3WfPnuptiKWxU91cLbErP4U9wzhU"
+				"bzz-raw://84d6aefcd2d5d2becf6e9600f9efe6cf0423107ca022397aaee9e6950988bc23",
+				"dweb:/ipfs/QmU63XmkxwqTU3c8wUWKLuESnfhzHk6YgamCGfBhoN5enS"
 			]
 		}
 	},

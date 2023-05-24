@@ -371,7 +371,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/LandRecordToken.sol": "LandRecordToken"
+			"Desktop/BLRM-Solidity/contracts/LandRecordToken.sol": "LandRecordToken"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -417,7 +417,7 @@
 				"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3"
 			]
 		},
-		"contracts/LandRecordToken.sol": {
+		"Desktop/BLRM-Solidity/contracts/LandRecordToken.sol": {
 			"keccak256": "0x26ae5680d788bf7138474f57f424646a563a7ee91aa7b30ed6bd36757cf7c368",
 			"license": "GPL-3.0",
 			"urls": [
