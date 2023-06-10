@@ -55731,20 +55731,20 @@
 											{
 												"externalReferences": [
 													{
-														"result": {
-															"declaration": 1092,
-															"isOffset": false,
-															"isSlot": false,
-															"src": "9633:6:0",
-															"valueSize": 1
-														}
-													},
-													{
 														"source": {
 															"declaration": 1089,
 															"isOffset": false,
 															"isSlot": false,
 															"src": "9653:6:0",
+															"valueSize": 1
+														}
+													},
+													{
+														"result": {
+															"declaration": 1092,
+															"isOffset": false,
+															"isSlot": false,
+															"src": "9633:6:0",
 															"valueSize": 1
 														}
 													}
