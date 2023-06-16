@@ -1,106 +1,141 @@
 {
 	"compiler": {
-		"version": "0.4.26+commit.4563c3fc"
+		"version": "0.8.20+commit.a1b79de6"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
 			{
-				"constant": true,
 				"inputs": [],
-				"name": "getPlotArrayLen",
-				"outputs": [
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
 					{
-						"name": "",
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "khatianHash",
+						"type": "bytes32"
+					}
+				],
+				"name": "CreationOfKhatian",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "plotHash",
+						"type": "bytes32"
+					}
+				],
+				"name": "CreationOfPlot",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "userAddress",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "userId",
 						"type": "uint256"
 					}
 				],
-				"payable": false,
-				"stateMutability": "view",
-				"type": "function"
+				"name": "CreationOfUser",
+				"type": "event"
 			},
 			{
-				"constant": false,
-				"inputs": [],
-				"name": "createUser",
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint64",
+						"name": "khatianiId",
+						"type": "uint64"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "plotHash",
+						"type": "bytes32"
+					}
+				],
+				"name": "createKhatian",
 				"outputs": [],
-				"payable": false,
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
-				"constant": true,
 				"inputs": [
 					{
-						"name": "_nid",
-						"type": "uint256"
-					}
-				],
-				"name": "getUserByNid",
-				"outputs": [
+						"internalType": "bytes32",
+						"name": "plotHash",
+						"type": "bytes32"
+					},
 					{
-						"components": [
-							{
-								"name": "fullName",
-								"type": "bytes32"
-							},
-							{
-								"name": "fatherName",
-								"type": "bytes32"
-							},
-							{
-								"name": "motherName",
-								"type": "bytes32"
-							},
-							{
-								"name": "district",
-								"type": "bytes32"
-							},
-							{
-								"name": "thana",
-								"type": "bytes32"
-							},
-							{
-								"name": "postCode",
-								"type": "uint256"
-							},
-							{
-								"name": "village",
-								"type": "bytes32"
-							},
-							{
-								"name": "email",
-								"type": "bytes32"
-							},
-							{
-								"name": "dob",
-								"type": "uint256"
-							},
-							{
-								"name": "totalTax",
-								"type": "uint256"
-							},
-							{
-								"name": "fingerprint",
-								"type": "string"
-							},
-							{
-								"name": "isExist",
-								"type": "bool"
-							}
-						],
-						"name": "",
-						"type": "tuple"
+						"internalType": "bytes32",
+						"name": "division",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "district",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "thana",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint16",
+						"name": "JLNo",
+						"type": "uint16"
+					},
+					{
+						"internalType": "uint16",
+						"name": "plotNo",
+						"type": "uint16"
+					},
+					{
+						"internalType": "uint8",
+						"name": "plotType",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint32",
+						"name": "plotArea",
+						"type": "uint32"
 					}
 				],
-				"payable": false,
-				"stateMutability": "view",
+				"name": "createPlot",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
-				"constant": true,
+				"inputs": [],
+				"name": "createUser",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
+						"internalType": "bytes32",
 						"name": "khatianHash",
 						"type": "bytes32"
 					}
@@ -110,223 +145,82 @@
 					{
 						"components": [
 							{
-								"name": "fullName",
+								"internalType": "uint64",
+								"name": "khatianiId",
+								"type": "uint64"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "plotHash",
 								"type": "bytes32"
 							},
 							{
-								"name": "fatherName",
+								"internalType": "uint16",
+								"name": "percentOwn",
+								"type": "uint16"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "buyFrom",
 								"type": "bytes32"
 							},
 							{
-								"name": "motherName",
-								"type": "bytes32"
+								"internalType": "bytes32[]",
+								"name": "sellTo",
+								"type": "bytes32[]"
 							},
 							{
-								"name": "district",
-								"type": "bytes32"
+								"internalType": "uint16[]",
+								"name": "sellPercentage",
+								"type": "uint16[]"
 							},
 							{
-								"name": "thana",
-								"type": "bytes32"
+								"internalType": "uint256[]",
+								"name": "ownerArray",
+								"type": "uint256[]"
 							},
 							{
-								"name": "postCode",
-								"type": "uint256"
+								"internalType": "uint16[]",
+								"name": "perOwnerPercentage",
+								"type": "uint16[]"
 							},
 							{
-								"name": "village",
-								"type": "bytes32"
-							},
-							{
-								"name": "email",
-								"type": "bytes32"
-							},
-							{
-								"name": "dob",
-								"type": "uint256"
-							},
-							{
-								"name": "totalTax",
-								"type": "uint256"
-							},
-							{
-								"name": "fingerprint",
-								"type": "string"
-							},
-							{
+								"internalType": "bool",
 								"name": "isExist",
 								"type": "bool"
 							}
 						],
+						"internalType": "struct LandRegistration.Khatian",
 						"name": "",
 						"type": "tuple"
 					}
 				],
-				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"constant": true,
 				"inputs": [
 					{
-						"name": "_uid",
-						"type": "uint256"
-					}
-				],
-				"name": "getUserOwnedByUid",
-				"outputs": [
-					{
-						"components": [
-							{
-								"name": "fullName",
-								"type": "bytes32"
-							},
-							{
-								"name": "fatherName",
-								"type": "bytes32"
-							},
-							{
-								"name": "motherName",
-								"type": "bytes32"
-							},
-							{
-								"name": "district",
-								"type": "bytes32"
-							},
-							{
-								"name": "thana",
-								"type": "bytes32"
-							},
-							{
-								"name": "postCode",
-								"type": "uint256"
-							},
-							{
-								"name": "village",
-								"type": "bytes32"
-							},
-							{
-								"name": "email",
-								"type": "bytes32"
-							},
-							{
-								"name": "dob",
-								"type": "uint256"
-							},
-							{
-								"name": "totalTax",
-								"type": "uint256"
-							},
-							{
-								"name": "fingerprint",
-								"type": "string"
-							},
-							{
-								"name": "isExist",
-								"type": "bool"
-							}
-						],
-						"name": "",
-						"type": "tuple"
-					}
-				],
-				"payable": false,
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"constant": true,
-				"inputs": [
-					{
+						"internalType": "uint256",
 						"name": "id",
 						"type": "uint256"
 					}
 				],
-				"name": "getUserIdById",
+				"name": "getKhatianHashById",
 				"outputs": [
 					{
-						"components": [
-							{
-								"name": "fullName",
-								"type": "bytes32"
-							},
-							{
-								"name": "fatherName",
-								"type": "bytes32"
-							},
-							{
-								"name": "motherName",
-								"type": "bytes32"
-							},
-							{
-								"name": "district",
-								"type": "bytes32"
-							},
-							{
-								"name": "thana",
-								"type": "bytes32"
-							},
-							{
-								"name": "postCode",
-								"type": "uint256"
-							},
-							{
-								"name": "village",
-								"type": "bytes32"
-							},
-							{
-								"name": "email",
-								"type": "bytes32"
-							},
-							{
-								"name": "dob",
-								"type": "uint256"
-							},
-							{
-								"name": "totalTax",
-								"type": "uint256"
-							},
-							{
-								"name": "fingerprint",
-								"type": "string"
-							},
-							{
-								"name": "isExist",
-								"type": "bool"
-							}
-						],
+						"internalType": "bytes32",
 						"name": "",
-						"type": "tuple"
+						"type": "bytes32"
 					}
 				],
-				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"constant": true,
 				"inputs": [
 					{
-						"name": "id",
-						"type": "uint256"
-					}
-				],
-				"name": "getKhatianHasById",
-				"outputs": [
-					{
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"payable": false,
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"constant": true,
-				"inputs": [
-					{
+						"internalType": "bytes32",
 						"name": "plotHash",
 						"type": "bytes32"
 					}
@@ -336,116 +230,645 @@
 					{
 						"components": [
 							{
-								"name": "fullName",
+								"internalType": "bytes32",
+								"name": "division",
 								"type": "bytes32"
 							},
 							{
-								"name": "fatherName",
-								"type": "bytes32"
-							},
-							{
-								"name": "motherName",
-								"type": "bytes32"
-							},
-							{
+								"internalType": "bytes32",
 								"name": "district",
 								"type": "bytes32"
 							},
 							{
+								"internalType": "bytes32",
 								"name": "thana",
 								"type": "bytes32"
 							},
 							{
-								"name": "postCode",
-								"type": "uint256"
+								"internalType": "uint16",
+								"name": "JLNo",
+								"type": "uint16"
 							},
 							{
-								"name": "village",
-								"type": "bytes32"
+								"internalType": "uint16",
+								"name": "plotNo",
+								"type": "uint16"
 							},
 							{
-								"name": "email",
-								"type": "bytes32"
+								"internalType": "uint8",
+								"name": "plotType",
+								"type": "uint8"
 							},
 							{
-								"name": "dob",
-								"type": "uint256"
+								"internalType": "uint32",
+								"name": "plotArea",
+								"type": "uint32"
 							},
 							{
-								"name": "totalTax",
-								"type": "uint256"
-							},
-							{
-								"name": "fingerprint",
-								"type": "string"
-							},
-							{
+								"internalType": "bool",
 								"name": "isExist",
 								"type": "bool"
 							}
 						],
+						"internalType": "struct LandRegistration.Plot",
 						"name": "",
 						"type": "tuple"
 					}
 				],
-				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"constant": true,
-				"inputs": [],
-				"name": "getKhatianArrayLen",
-				"outputs": [
-					{
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"payable": false,
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"constant": true,
-				"inputs": [],
-				"name": "getUserArrayLen",
-				"outputs": [
-					{
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"payable": false,
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": true,
-						"name": "nid",
+						"internalType": "uint256",
+						"name": "id",
 						"type": "uint256"
 					}
 				],
-				"name": "CreationOfUser",
-				"type": "event"
+				"name": "getPlotHashById",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "getUserByAddress",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "bytes32",
+								"name": "fullName",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "fatherName",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "motherName",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "district",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "thana",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "uint256",
+								"name": "postCode",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "village",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "email",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "uint256",
+								"name": "dob",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "totalTax",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "fingerprint",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "isExist",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct LandRegistration.User",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "getUserOwnedByAddress",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "number",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes32[]",
+								"name": "khatianList",
+								"type": "bytes32[]"
+							}
+						],
+						"internalType": "struct LandRegistration.UserOwned",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "khatianArray",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "khatianMapping",
+				"outputs": [
+					{
+						"internalType": "uint64",
+						"name": "khatianiId",
+						"type": "uint64"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "plotHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint16",
+						"name": "percentOwn",
+						"type": "uint16"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "buyFrom",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bool",
+						"name": "isExist",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "plotArray",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "plotMapping",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "division",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "district",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "thana",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint16",
+						"name": "JLNo",
+						"type": "uint16"
+					},
+					{
+						"internalType": "uint16",
+						"name": "plotNo",
+						"type": "uint16"
+					},
+					{
+						"internalType": "uint8",
+						"name": "plotType",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint32",
+						"name": "plotArea",
+						"type": "uint32"
+					},
+					{
+						"internalType": "bool",
+						"name": "isExist",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "fingerprint",
+						"type": "string"
+					}
+				],
+				"name": "updateFingerprint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "dob",
+						"type": "uint256"
+					}
+				],
+				"name": "updateUserDOB",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "district",
+						"type": "bytes32"
+					}
+				],
+				"name": "updateUserDistrict",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "email",
+						"type": "bytes32"
+					}
+				],
+				"name": "updateUserEmail",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "fatherName",
+						"type": "bytes32"
+					}
+				],
+				"name": "updateUserFatherName",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "fullName",
+						"type": "bytes32"
+					}
+				],
+				"name": "updateUserFullName",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "motherName",
+						"type": "bytes32"
+					}
+				],
+				"name": "updateUserMotherName",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "postCode",
+						"type": "uint256"
+					}
+				],
+				"name": "updateUserPostCode",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "thana",
+						"type": "bytes32"
+					}
+				],
+				"name": "updateUserThana",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalTax",
+						"type": "uint256"
+					}
+				],
+				"name": "updateUserTotalTax",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "village",
+						"type": "bytes32"
+					}
+				],
+				"name": "updateUserVillage",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "userCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "userMapping",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "fullName",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "fatherName",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "motherName",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "district",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "thana",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "postCode",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "village",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "email",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "dob",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalTax",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "fingerprint",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "isExist",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "userOwnedMapping",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "number",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
-			"methods": {}
+			"kind": "dev",
+			"methods": {},
+			"version": 1
 		},
 		"userdoc": {
-			"methods": {}
+			"kind": "user",
+			"methods": {},
+			"version": 1
 		}
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/LandRegFinal.sol": "LandRegistration"
+			"contracts/LandRecordFactory.sol": "LandRegistration"
 		},
-		"evmVersion": "byzantium",
+		"evmVersion": "shanghai",
 		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
 		"optimizer": {
 			"enabled": false,
 			"runs": 200
@@ -453,10 +876,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/LandRegFinal.sol": {
-			"keccak256": "0x4e134c5ee3759d83349d8daebbc5d0e784f2386a22bf20e144cb96d0a42ccc58",
+		"contracts/LandRecordFactory.sol": {
+			"keccak256": "0xff122caafd489ae9022380b9b8e8c6e191ab1edd751f7e57143c94535c574ca6",
+			"license": "GPL-3.0",
 			"urls": [
-				"bzzr://c96b0c83d9bec03a7e0617d80ec94527678dd904999f176dda9e4bcc729bd09e"
+				"bzz-raw://658c0e42cecb480726474e4fe0ab97b88fb1d4d4c6466c782866be2ebd9ac109",
+				"dweb:/ipfs/QmYBCr6bojZS5oezLi6RvWGRqXeYZKsw1nAvMXxSL2YeEe"
 			]
 		}
 	},
