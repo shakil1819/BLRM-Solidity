@@ -466,7 +466,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Desktop/BLRM-Solidity/contracts/LandRecordFactory.sol": "landRegistration"
+			"contracts/LandRecordFactory.sol": "landRegistration"
 		},
 		"evmVersion": "byzantium",
 		"libraries": {},
@@ -477,7 +477,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"Desktop/BLRM-Solidity/contracts/LandRecordFactory.sol": {
+		"contracts/LandRecordFactory.sol": {
 			"keccak256": "0xc66549e288f1a3cf0ec004d1254b8663a56c608b2a0b5ad239e15ec6e7dd8f97",
 			"urls": [
 				"bzzr://c89ec398306b01fa9c77f6e434b005c0c6b4720c46e990624a4ee81208f5ba34"
